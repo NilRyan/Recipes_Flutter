@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:recipes/recipe.dart';
+import 'package:recipes/recipe_detail.dart';
 
 void main() {
   runApp(const RecipeApp());
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   // TODO: Replace return with return RecipeDetail()
-                  return const Text('Detail Page');
+                  return RecipeDetail(recipe: Recipe.samples[index]);
                 }));
               },
               child: buildRecipeCard(Recipe.samples[index]),
